@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      nav.container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0.2rem;
+        box-sizing: border-box;
+        background-color: rgb(65, 17, 17);
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(95, 48, 48, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      #buttons {
+        display: flex;
+        gap: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(255, 0, 0);
+        border: none;
+        background-color: rgb(65, 17, 17);
+        color: rgb(52, 43, 43);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin: 10px;
+        transition: ease-in-out 0.5s;
+      }
+      #buttons:hover {
+        background-color: rgb(40, 209, 204);
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+        padding: 1rem;
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        transition: ease-in-out 0.5s;
+      }
+      @media screen and (max-width: 768px) {
+        nav.container {
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 1rem;
+          box-sizing: border-box;
+        }
+        #buttons {
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 1rem;
+          box-sizing: border-box;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+        .card {
+          width: 100%;
+          height: 100%;
+          margin: 5px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          padding: 1rem;
+          background-color: rgb(234, 188, 188);
+        }
+      }
+      .card {
+        width: 300px;
+        height: 700px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+        align-items: center;
+        flex-direction: column;
+      }
+      #cards button {
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        background-color: blue;
+        color: #fff;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+      #cards .card .bTn {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .card .card-body {
+        display: flex;
+        flex-direction: column;
+      }
+      .heading {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(255, 119, 0);
+        text-shadow: 0 0 5px rgb(0, 204, 255), 0 0 10px rgb(4, 0, 255),
+          0 0 15px rgb(255, 0, 0);
+      }
+      #cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        gap: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+      }
+      img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgb(204, 93, 175);
+      }
+      img:hover {
+        transform: scale(1.1);
+        transition: ease-in-out 0.5s;
+        cursor: pointer;
+      }
+      .title {
+        font-size: 16px;
+      }
+      .category {
+        color: rgb(43, 124, 100);
+        size: 2px;
+        margin-bottom: 0.1rem;
+      }
+      #categoryButtons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        border: none;
+      }
+    </style>
+    <title>Store</title>
+  </head>
+  <body>
+    <nav class="container">
+      <h1>Dry Goods Store</h1>
+      <div id="buttons">
+        <input type="text" id="searchInput" placeholder="Search...." />
+        <button onclick="searchProducts()">Search</button>
+      </div>
+      <div id="categoryButtons">
+        <button
+          onclick="getOptions('https://fakestoreapi.com/products/categories')"
+        >
+          Categories
+        </button>
+        <select name="" id="categories"></select>
+      </div>
+    </nav>
+    <h4 class="heading">Dry Goods Store</h4>
+    <div id="cards">
+      <div class="card">
+        <h1 class="title">Title</h1>
+        <img src="" alt="image" />
+        <p class="description">Description</p>
+        <p class="category">Category</p>
+        <p class="price">Price</p>
+        <button class="bTn">Buy Now</button>
+        <button class="bTn">Add to Cart</button>
+      </div>
+      <div id="root"></div>
+    </div>
+    <script>
+      fetch("https://fakestoreapi.com/products")
+        .then((data) => data.json())
+        .then((completeData) => {
+          let data1 = "";
+          completeData.forEach((values) => {
+            data1 += `<div class="card">
+              <h1 class="title">${values.title}</h1>
+              <img src="${values.image}" alt="image" />
+              <p class="description">${values.description.substring(0, 100)}</p>
+              <button onclick="alert('Item added to cart')">Buy Now</button>
+              <button onclick="alert('Item added to cart')">Add to Cart</button>
+              <p class="category">${values.category}</p>
+              <p class="price">${values.price}</p>
+              <button onclick="showFullDescription('${
+                values.description
+              }')">Read More</button>
+            </div>`;
+          });
+          document.getElementById("cards").innerHTML = data1;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      function showFullDescription(description) {
+        alert(description); // Replace with your desired way of displaying the full description
+      }
+
+      // Function to search and filter products based on user input in the search input field.
+      function searchProducts() {
+        var input, filter, root, products, i, productName;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        root = document.getElementById("cards");
+        products = root.getElementsByClassName("card");
+        for (i = 0; i < products.length; i++) {
+          productName = products[i]
+            .getElementsByClassName("title")[0]
+            .innerText.toUpperCase();
+          if (productName.indexOf(filter) > -1) {
+            products[i].style.display = "";
+          } else {
+            products[i].style.display = "none";
+          }
+        }
+      }
+      // Function to get options for the category select dropdown
+      async function getOptions(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        const select = document.getElementById("categories");
+        select.innerHTML = ""; // Clear previous options
+        data.forEach((category) => {
+          let option = document.createElement("option");
+          option.value = category;
+          option.innerText = category;
+          select.append(option);
+        });
+      }
+
+      // Function to handle category selection
+      function handleCategorySelection() {
+        const selectedCategory = document.getElementById("categories").value;
+        filterProductsByCategory(selectedCategory);
+      }
+
+      // Function to filter products by category and update the DOM with the filtered product cards
+      function filterProductsByCategory(selectedCategory) {
+        fetch(`https://fakestoreapi.com/products/category/${selectedCategory}`)
+          .then((response) => response.json())
+          .then((filteredProducts) => {
+            let data1 = "";
+            filteredProducts.forEach((product) => {
+              data1 += `<div class="card">
+            <h1 class="title">${product.title}</h1>
+            <img src="${product.image}" alt="image" />
+            <p class="description">${product.description.substring(0, 100)}</p>
+            <button onclick="alert('Item added to cart')">Buy Now</button>
+            <button onclick="alert('Item added to cart')">Add to Cart</button>
+            <p class="category">${product.category}</p>
+            <p class="price">${product.price}</p>
+            <button onclick="showFullDescription('${
+              product.description
+            }')">Read More</button>
+          </div>`;
+            });
+            document.getElementById("cards").innerHTML = data1;
+          });
+      }
+
+      // Event listener for category selection
+      document
+        .getElementById("categories")
+        .addEventListener("change", handleCategorySelection);
+
+      // Initial call to get options for the category select dropdown
+      getOptions("https://fakestoreapi.com/products/categories");
+    </script>
+  </body>
+</html>
