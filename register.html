@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Fake Store</h1>
+      <a href="./index.html#home" id="Home">Home</a>
+      <a href="./index.html#p" id="Products">Products</a>
+      <div id="containerButtons"></div>
+      <div id="auxiliaryButtonsContainer">
+        <a href="cart.html"><button id="auxiliaryButtons">Cart</button></a>
+        <a href="register.html"
+          ><button id="auxiliaryButtons1">Register</button></a
+        >
+        <a href="login.html"><button id="auxiliaryButton">Login</button></a>
+      </div>
+    </nav>
+    <section id="login">
+      <div class="card">
+        <h3>Register</h3>
+        <form id="form">
+          <input type="text" id="username" placeholder="Username" />
+          <input type="email" id="email" placeholder="Email" />
+          <input type="password" id="password" placeholder="Password" />
+          <div class="btns">
+            <button onclick="submitRegister()">Register</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+  <footer>
+    <div class="footer-container">
+      <div class="social-media">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="contact-info">
+        <p>Email: engreyxien@gmail.com</p>
+        <p>Phone: +63921234567</p>
+        <p>Address: JP laurel St, Ligaya, Odiongan, Romblon</p>
+      </div>
+    </div>
+    <p>&copy; 2023 Dry Goods Store. All rights reserved.</p>
+  </footer>
+</html>

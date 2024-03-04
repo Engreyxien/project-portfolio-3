@@ -1,0 +1,394 @@
+body {
+  background-color: rgb(241, 177, 230);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: fit-content;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  background-color: rgb(111, 49, 49);
+  color: rgb(207, 38, 212);
+  text-shadow: 0 0 5px rgb(221, 227, 228), 0 0 10px rgb(219, 219, 231),
+    0 0 15px rgb(212, 198, 198);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+#Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: none;
+  color: rgb(29, 33, 84);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  text-decoration: none;
+}
+#Products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: none;
+  color: rgb(29, 33, 84);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  text-decoration: none;
+}
+#containerButtons {
+  display: flex;
+  flex-direction: row;
+}
+#containerButtons #searchInput {
+  display: flex;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border: white;
+  background-color: rgb(111, 49, 49);
+  color: rgb(52, 43, 43);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+#containerButtons #searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  border: none;
+  background-color: rgb(202, 237, 236);
+  color: rgb(52, 43, 43);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+#containerButtons #searchButton:hover {
+  background-color: rgb(111, 49, 49);
+  color: white;
+}
+#categoryButtons {
+  display: flex;
+  flex-direction: row;
+}
+#categoriesButton {
+  display: flex;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(241, 177, 230);
+  color: rgb(52, 43, 43);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+#categoriesButton:hover {
+  background-color: rgb(241, 177, 230);
+  border-radius: 10px;
+  color: rgb(239, 232, 232);
+  cursor: pointer;
+  text-decoration: none;
+  transition: ease-in-out 0.5s;
+}
+#categories {
+  display: flex;
+  padding: 10px;
+  background-color: rgb(241, 177, 230);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+}
+#categories:hover {
+  background-color: rgb(111, 49, 49);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#auxiliaryButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+}
+#auxiliaryButtons {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  background-color: rgb(111, 49, 49);
+  color: rgb(253, 242, 242);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 50px;
+  transition: ease-in-out 0.5s;
+}
+#auxiliaryButtons:hover {
+  color: rgb(226, 87, 212);
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: ease-in-out 0.5s;
+}
+#auxiliaryButton {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  background-color: rgb(111, 49, 49);
+  color: rgb(45, 237, 240);
+  border-radius: 10px;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+#auxiliaryButton:hover {
+  background-color: rgb(40, 209, 204);
+  color: rgb(39, 2, 2);
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+#auxiliaryButtons1 {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  background-color: rgb(111, 49, 49);
+  color: rgb(253, 242, 242);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+#auxiliaryButtons1:hover {
+  color: rgb(39, 2, 2);
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: ease-in-out 0.5s;
+}
+#login {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login .card {
+  border: 1px solid rgb(234, 234, 234);
+  background-color: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 1rem;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+#login .card h3 {
+  text-align: center;
+}
+#login .card form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 10px;
+}
+#login .card form input {
+  padding: 1rem;
+  border: 1px solid rgb(234, 234, 234);
+  margin: 10px;
+  border-radius: 5px;
+}
+#login .card form .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#login .card form .btns a {
+  text-decoration: none;
+  color: #0b3954;
+  font-weight: 800;
+}
+#login .card form button {
+  background-color: #9d5691;
+  border: 0;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 20px;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  #containerButtons {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  #auxiliaryButtonsContainer {
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: ease-in-out 0.5s;
+    margin: 0;
+  }
+  #auxiliaryButtons {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(111, 49, 49);
+    color: rgb(253, 242, 242);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 0;
+    transition: ease-in-out 0.5s;
+  }
+  #auxiliaryButton {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(111, 49, 49);
+    color: rgb(45, 237, 240);
+    border-radius: 10px;
+    margin-left: 0;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+  }
+  #login .card {
+    border: 1px solid rgb(234, 234, 234);
+    background-color: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    overflow: auto;
+  }
+  #login .card form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 10px;
+  }
+  #login .card form .btns a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    text-decoration: none;
+    color: #0b3954;
+    font-weight: 800;
+  }
+}
+footer {
+  background-color: rgb(199, 128, 128);
+  color: rgb(61, 40, 40);
+  padding: 20px;
+  text-align: center;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 10px;
+}
+.social-media img {
+  height: 30px;
+  width: 30px;
+  color: #fff;
+}
+.contact-info {
+  text-align: center;
+}
+.contact-info p {
+  margin: 5px 0;
+}
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
