@@ -101,27 +101,12 @@ function submitRegister() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
 
-  // Create a new account object
-  var account = {
-    username: username,
-    email: email,
-    password: password,
-  };
-
-  // Save the account to local storage
-  var accounts = JSON.parse(localStorage.getItem("accounts")) || [];
-  accounts.push(account);
-  localStorage.setItem("accounts", JSON.stringify(accounts));
-
-  // Display the registered account in index.html
-  displayRegisteredAccount(account);
-}
-
-function displayRegisteredAccount(account) {
-  // You can display the registered account in index.html using DOM manipulation
-  // For example, you can create a list of registered accounts and append the new account to the list
-  var accountList = document.getElementById("accountList");
-  var listItem = document.createElement("li");
-  listItem.textContent = account.username + " - " + account.email;
-  accountList.appendChild(listItem);
+  function displayRegisteredAccount(account) {
+    // You can display the registered account in index.html using DOM manipulation
+    // For example, you can create a list of registered accounts and append the new account to the list
+    var accountList = document.getElementById("accountList");
+    var listItem = document.createElement("li");
+    listItem.textContent = account.username + " - " + account.email;
+    accountList.appendChild(listItem);
+  }
 }
