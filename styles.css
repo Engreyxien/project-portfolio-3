@@ -208,7 +208,7 @@ nav {
   align-items: center;
 }
 #login .card {
-  border: 1px solid rgb(234, 234, 234);
+  border: 1px solid rgb(243, 9, 36);
   background-color: blur(10px);
   display: flex;
   flex-direction: column;
@@ -218,6 +218,7 @@ nav {
   gap: 1rem;
   border-radius: 2rem;
   padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #login .card h3 {
   text-align: center;
@@ -231,7 +232,7 @@ nav {
 #login .card form input {
   padding: 1rem;
   border: 1px solid rgb(234, 234, 234);
-  margin: 10px;
+  margin: 8px;
   border-radius: 5px;
 }
 #login .card form .btns {
@@ -328,7 +329,7 @@ nav {
     transition: ease-in-out 0.5s;
   }
   #login .card {
-    border: 1px solid rgb(234, 234, 234);
+    border: 1px solid rgb(211, 204, 109);
     background-color: blur(10px);
     display: flex;
     flex-direction: column;
@@ -337,13 +338,13 @@ nav {
     gap: 1rem;
     border-radius: 2rem;
     padding: 2rem;
-    overflow: auto;
+    box-shadow: rgb(228, 7, 44);
   }
   #login .card form {
     display: flex;
     flex-direction: column;
     width: 250px;
-    margin: 10px;
+    margin: 5px;
   }
   #login .card form .btns a {
     display: flex;
