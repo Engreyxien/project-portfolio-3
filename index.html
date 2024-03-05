@@ -9,7 +9,7 @@
     />
     <style>
       body {
-        background-color: #fff;
+        background: linear-gradient(to right, #e0ccb5, #e16d98);
         margin: 0;
         padding: 0;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -24,6 +24,9 @@
         margin-bottom: 10px;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 20px;
+      }
+      h4 {
+        background: linear-gradient(to right, #e0ccb5, #e16d98);
       }
       h1 {
         text-shadow: 0 0 5px rgb(231, 27, 9), 0 0 10px rgb(219, 219, 231),
@@ -42,6 +45,13 @@
         transition: ease-in-out 0.5s;
         text-decoration: none;
       }
+      #homeContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+      }
       #Home:hover {
         color: rgb(30, 222, 225);
         transition: ease-in-out 0.5s;
@@ -50,6 +60,7 @@
       #Products {
         display: flex;
         justify-content: center;
+        padding: 1.5rem;
         align-items: center;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 20px;
@@ -110,7 +121,7 @@
         font-weight: bold;
         font-size: 20px;
         border: none;
-        background-color: #fff;
+        background:none;
         color: rgb(52, 43, 43);
         border-radius: 10px;
         cursor: pointer;
@@ -301,7 +312,7 @@
         margin-bottom: 50px;
         gap: 20px;
         padding: 20px;
-        background-color: #fff;
+        background: linear-gradient(to right, #e0ccb5, #e16d98);
         border-radius: 5px;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         color: rgb(0, 0, 0);
@@ -324,7 +335,7 @@
         margin: 5px;
         display: flex;
         justify-content: center;
-        background-color: rgb(112, 99, 99);
+        background: gray;
         color: #fff;
         text-align: center;
         padding: 1rem;
@@ -422,18 +433,19 @@
   <body>
     <nav>
       <h1>Fake Store</h1>
-      <a href="#home" id="Home">Home</a>
-      <a href="#products" id="Products">Products</a>
+      <div id="homeContainer">
+        <a href="#home" id="Home">Home</a>
+        <a href="#products" id="Products">Products</a>
+      </div>
       <div id="containerButtons">
         <input type="text" id="searchInput" placeholder="Search...." />
         <button onclick="searchProducts()" id="searchButton">Search</button>
       </div>
       <div id="auxiliaryButtonsContainer">
-        <a href="cart.html"><button id="auxiliaryButtons">Cart</button></a>
-        <a href="register.html"
-          ><button id="auxiliaryButtons1">Register</button></a
+        <a href="cart.html"id="auxiliaryButtons">Cart</a>
+        <a href="register.html" id="auxiliaryButtons1">Register</bid=></a
         >
-        <a href="login.html"><button id="auxiliaryButton">Login</button></a>
+        <a href="login.html" id="auxiliaryButton">Login</a>
       </div>
     </nav>
     <section id="home">

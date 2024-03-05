@@ -1,53 +1,72 @@
-body {
-  background-color: rgb(241, 177, 230);
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  height: fit-content;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  background: linear-gradient(to right, #e0ccb5, #e16d98);
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0.2rem;
   box-sizing: border-box;
   background-color: rgb(111, 49, 49);
-  color: rgb(207, 38, 212);
-  text-shadow: 0 0 5px rgb(221, 227, 228), 0 0 10px rgb(219, 219, 231),
-    0 0 15px rgb(212, 198, 198);
-  border-radius: 5px;
+  color: rgb(215, 204, 215);
   margin-bottom: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
-  font-weight: bold;
+}
+h1 {
+  text-shadow: 0 0 5px rgb(231, 27, 9), 0 0 10px rgb(219, 219, 231),
+    0 0 15px rgb(165, 77, 77);
 }
 #Home {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   border: none;
-  color: rgb(29, 33, 84);
+  color: #fff;
   border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.5s;
   text-decoration: none;
 }
+#homeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+#Home:hover {
+  color: rgb(30, 222, 225);
+  transition: ease-in-out 0.5s;
+  font-weight: bold;
+}
 #Products {
   display: flex;
   justify-content: center;
+  padding: 1.5rem;
   align-items: center;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   border: none;
-  color: rgb(29, 33, 84);
+  color: #fff;
   border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.5s;
   text-decoration: none;
+}
+#Products:hover {
+  color: rgb(30, 222, 225);
+  transition: ease-in-out 0.5s;
 }
 #containerButtons {
   display: flex;
@@ -209,7 +228,6 @@ nav {
 }
 #login .card {
   border: 1px solid rgb(243, 9, 36);
-  background-color: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,6 +237,7 @@ nav {
   border-radius: 2rem;
   padding: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  backdrop-filter: blur(10px);
 }
 #login .card h3 {
   text-align: center;
@@ -248,7 +267,7 @@ nav {
   font-weight: 800;
 }
 #login .card form button {
-  background-color: #9d5691;
+  background: linear-gradient(to right, #74afd1, #0b3954);
   border: 0;
   border-radius: 1rem;
   padding: 1rem 2rem;
@@ -256,6 +275,7 @@ nav {
   font-size: 20px;
   color: #f1f1f1;
   cursor: pointer;
+  backdrop-filter: blur(10px);
 }
 @media screen and (max-width: 768px) {
   nav {
@@ -392,4 +412,5 @@ footer {
 footer p {
   margin-top: 10px;
   font-size: 14px;
+  color: #fff;
 }
