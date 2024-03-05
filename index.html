@@ -9,7 +9,7 @@
     />
     <style>
       body {
-        background-color: rgb(241, 177, 230);
+        background-color: #fff;
         margin: 0;
         padding: 0;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -20,14 +20,14 @@
         align-items: center;
         box-sizing: border-box;
         background-color: rgb(111, 49, 49);
-        color: rgb(207, 38, 212);
+        color: rgb(215, 204, 215);
         margin-bottom: 10px;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 20px;
       }
       h1 {
-        text-shadow: 0 0 5px rgb(221, 227, 228), 0 0 10px rgb(219, 219, 231),
-          0 0 15px rgb(212, 198, 198);
+        text-shadow: 0 0 5px rgb(231, 27, 9), 0 0 10px rgb(219, 219, 231),
+          0 0 15px rgb(165, 77, 77);
       }
       #Home {
         display: flex;
@@ -36,7 +36,7 @@
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 20px;
         border: none;
-        color: rgb(128, 132, 187);
+        color: #fff;
         border-radius: 10px;
         cursor: pointer;
         transition: ease-in-out 0.5s;
@@ -54,7 +54,7 @@
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 20px;
         border: none;
-        color: rgb(128, 132, 187);
+        color: #fff;
         border-radius: 10px;
         cursor: pointer;
         transition: ease-in-out 0.5s;
@@ -89,15 +89,15 @@
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 16px;
         border: none;
-        background-color: rgb(202, 237, 236);
-        color: rgb(52, 43, 43);
+        background-color: rgb(111, 49, 49);
+        color: #fff;
         border-radius: 10px;
         cursor: pointer;
         transition: ease-in-out 0.5s;
       }
       #containerButtons #searchButton:hover {
-        background-color: rgb(111, 49, 49);
-        color: white;
+        background-color: #fff;
+        color: rgb(21, 1, 1);
       }
       #categoryButtons {
         display: flex;
@@ -110,24 +110,16 @@
         font-weight: bold;
         font-size: 20px;
         border: none;
-        background-color: rgb(241, 177, 230);
+        background-color: #fff;
         color: rgb(52, 43, 43);
         border-radius: 10px;
         cursor: pointer;
         transition: ease-in-out 0.5s;
       }
-      #categoriesButton:hover {
-        background-color: rgb(241, 177, 230);
-        border-radius: 10px;
-        color: rgb(239, 232, 232);
-        cursor: pointer;
-        text-decoration: none;
-        transition: ease-in-out 0.5s;
-      }
       #categories {
         display: flex;
         padding: 10px;
-        background-color: rgb(241, 177, 230);
+        background-color: #fff;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-weight: bold;
         font-size: 16px;
@@ -309,7 +301,7 @@
         margin-bottom: 50px;
         gap: 20px;
         padding: 20px;
-        background-color: rgb(241, 177, 230);
+        background-color: #fff;
         border-radius: 5px;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         color: rgb(0, 0, 0);
@@ -332,10 +324,12 @@
         margin: 5px;
         display: flex;
         justify-content: center;
+        background-color: rgb(112, 99, 99);
+        color: #fff;
         text-align: center;
         padding: 1rem;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          0 6px 20px 0 rgba(73, 54, 54, 0.19);
         border-radius: 5px;
         align-items: center;
         flex-direction: column;
@@ -347,15 +341,10 @@
         border: none;
         display: flex;
         flex-direction: row;
-        background-color: rgb(195, 51, 128);
+        background-color: rgb(102, 109, 233);
         color: #fff;
         font-size: 0.8rem;
         cursor: pointer;
-      }
-      #cards .card .bTn {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
       }
       .card .card-body {
         display: flex;
@@ -363,25 +352,27 @@
       }
       .heading {
         text-align: center;
-        background-color: rgb(241, 177, 230);
+        background-color: #fff;
         font-size: 50px;
         font-weight: bold;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        color: rgb(255, 119, 0);
+        color: rgb(23, 22, 22);
         text-shadow: 0 0 5px rgba(244, 182, 197, 0.945);
       }
       .title {
         font-size: 15px;
+        text-shadow: none;
+        color: antiquewhite;
       }
       .category {
-        color: rgb(43, 124, 100);
+        color: rgb(163, 237, 215);
         size: 2px;
         margin-bottom: 0.1rem;
       }
       #categoryButtons {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: right;
         gap: 10px;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -391,7 +382,7 @@
       }
       footer {
         background-color: rgb(199, 128, 128);
-        color: rgb(61, 40, 40);
+        color: rgb(239, 238, 238);
         padding: 20px;
         text-align: center;
       }
@@ -460,7 +451,7 @@
     <section id="products">
       <div id="cards">
         <div class="card">
-          <h1 class="title">Title</h1>
+          <h2 class="title">Title</h2>
           <img src="" alt="image" />
           <p class="description">Description</p>
           <p class="category">Category</p>
