@@ -4,17 +4,20 @@ fetch("https://fakestoreapi.com/products")
     let data1 = "";
     completeData.forEach((values) => {
       data1 += `<div class="card">
-              <h1 class="title">${values.title}</h1>
-              <img src="${values.image}" alt="image" />
-              <p class="description">${values.description.substring(0, 100)}</p>
-              <button onclick="alert('Item added to cart')">Buy Now</button>
-              <button onclick="alert('Item added to cart')">Add to Cart</button>
-              <p class="category">${values.category}</p>
-              <p class="price">${values.price}</p>
-              <button onclick="showFullDescription('${
-                values.description
-              }')">Read More</button>
-            </div>`;
+                  <h1 class="title">${values.title}</h1>
+                  <img src="${values.image}" alt="image" />
+                  <p class="description">${values.description.substring(
+                    0,
+                    100
+                  )}</p>
+                  <button onclick="alert('Item added to cart')">Buy Now</button>
+                  <button onclick="alert('Item added to cart')">Add to Cart</button>
+                  <p class="category">${values.category}</p>
+                  <p class="price">${values.price}</p>
+                  <button onclick="showFullDescription('${
+                    values.description
+                  }', event)">Read More</button>
+                </div>`;
     });
     document.getElementById("cards").innerHTML = data1;
   })
@@ -22,10 +25,48 @@ fetch("https://fakestoreapi.com/products")
     console.log(error);
   });
 
-function showFullDescription(description) {
-  alert(description);
-}
+function showFullDescription(description, event) {
+  var modal = document.createElement("div");
+  modal.classList.add("modal");
 
+  var closeButton = document.createElement("button");
+  closeButton.textContent = "X";
+  closeButton.classList.add("close-button");
+  closeButton.addEventListener("click", function () {
+    modal.remove();
+  });
+
+  var descriptionText = document.createElement("p");
+  descriptionText.textContent = description;
+
+  modal.appendChild(closeButton);
+  modal.appendChild(descriptionText);
+  document.body.appendChild(modal);
+
+  // Position the modal above the clicked "Read More" button
+  var rect = event.target.getBoundingClientRect();
+  var modalWidth = modal.offsetWidth;
+  var modalHeight = modal.offsetHeight;
+  var buttonWidth = event.target.offsetWidth;
+  var buttonHeight = event.target.offsetHeight;
+
+  var top = rect.top - modalHeight - 10; // Adjust as needed
+  var left = rect.left + (buttonWidth - modalWidth) / 2;
+
+  // Check if the modal overflows the window and adjust the position if necessary
+  if (top < 0) {
+    top = 10; // Adjust as needed
+  }
+  if (left < 0) {
+    left = 10; // Adjust as needed
+  }
+  if (left + modalWidth > window.innerWidth) {
+    left = window.innerWidth - modalWidth - 10; // Adjust as needed
+  }
+
+  modal.style.top = top + "px";
+  modal.style.left = left + "px";
+}
 // Function to search and filter products based on user input in the search input field.
 function searchProducts() {
   var input, filter, root, products, i, productName;
